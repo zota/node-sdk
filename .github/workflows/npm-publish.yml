@@ -11,8 +11,8 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           registry-url: 'https://npm.pkg.github.com'
@@ -26,8 +26,8 @@ jobs:
       contents: read
       packages: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET_TOKEN }}
         with:
